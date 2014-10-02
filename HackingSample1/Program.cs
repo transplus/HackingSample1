@@ -23,7 +23,14 @@ namespace HackingSample1
 
             licensed = bool.Parse(ConfigurationManager.AppSettings["licensed"]);
 
-            Application.Run(new Form1());
+            if (licensed)
+            {
+                Application.Run(new Form1());
+            }
+            else
+            {
+                MessageBox.Show("You're not licensed :-(");
+            }
         }
     }
 }
